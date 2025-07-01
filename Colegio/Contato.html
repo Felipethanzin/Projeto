@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato - José Lins do Rego</title>
+  <link rel="stylesheet" href="css e java/Colegio.css" />
+  <script defer src="css e java/Colegio.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">José Lins do Rego</div>
+      <nav>
+        <button id="menu-toggle" class="menu-toggle">☰</button>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="Colegio.html">Início</a></li>
+          <li><a href="Fotos.html">Fotos</a></li>
+          <li><a href="Historias.html">Histórias</a></li>
+          <li><a href="Obras.html">Obras</a></li>
+          <li><a href="Vidapessoal.html">Vida Pessoal</a></li>
+          <li><a href="legado.html">Legado</a></li>
+          <li><a href="contato.html" class="active">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="story">
+      <h1>Contato do Museu José Lins do Rego</h1>
+      <p>Para mais informações, dúvidas ou sugestões, entre em contato conosco pelos canais abaixo:</p>
+      <ul style="list-style: none; padding-left: 0; font-size: 1.2rem; color: var(--cor-texto);">
+        <li><strong>Telefone:</strong> (83) 3211-6225</li>
+        <li><strong>Email:</strong> <a href="mailto:museufunescpb@gmail.com" style="color: var(--cor-link); text-decoration: none;">museufunescpb@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <section style="margin-top: 2rem;">
+      <h2>Envie sua mensagem</h2>
+      <form id="contact-form" style="max-width: 480px; margin-top: 1rem;">
+        <label for="name" style="display:block; margin-bottom: 6px;">Nome:</label>
+        <input type="text" id="name" name="name" required style="width:100%; padding:10px; border-radius:8px; border:1px solid #ccc; margin-bottom: 16px; font-size: 1rem;" />
+
+        <label for="email" style="display:block; margin-bottom: 6px;">Email:</label>
+        <input type="email" id="email" name="email" required style="width:100%; padding:10px; border-radius:8px; border:1px solid #ccc; margin-bottom: 16px; font-size: 1rem;" />
+
+        <label for="message" style="display:block; margin-bottom: 6px;">Mensagem:</label>
+        <textarea id="message" name="message" rows="5" required style="width:100%; padding:10px; border-radius:8px; border:1px solid #ccc; margin-bottom: 16px; font-size: 1rem;"></textarea>
+
+        <button type="submit" class="btn" style="width: 100%;">Enviar</button>
+      </form>
+      <div id="form-message" style="margin-top: 1rem; font-weight: bold; color: green; display:none;"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 - Homenagem a José Lins do Rego | Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script>
+    // JavaScript simples para simular envio do formulário
+    const form = document.getElementById('contact-form');
+    const formMessage = document.getElementById('form-message');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      formMessage.style.color = 'green';
+      formMessage.textContent = 'Mensagem enviada com sucesso! Obrigado pelo contato.';
+      formMessage.style.display = 'block';
+      form.reset();
+    });
+  </script>
+</body>
+</html>
